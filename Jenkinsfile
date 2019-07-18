@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "echo 'teste ok'"
+                sh "echo 'simulando build'"
             }
         }
         stage("Test") {
             steps {
-                sh "echo 'ta rodando'"
+                sh "echo 'simulando teste automatizado'"
             }
         }
     }
