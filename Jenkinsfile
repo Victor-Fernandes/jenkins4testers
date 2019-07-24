@@ -2,7 +2,7 @@ pipeline {
     agent {
         //agent docker ruby para executar os testes
         docker {
-            image "ruby"
+            image "ruby:alpine"
         }
     }
     stages {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Test") {
             steps {
-                sh "echo 'teste'"
+                sh "bundle exec cucumber -p ci"
             }
         }
     }
