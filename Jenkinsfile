@@ -2,7 +2,7 @@ pipeline {
     agent {
         //agent docker ruby para executar os testes
         docker {
-            image "ruby:alpine"
+            image "ruby"
         }
     }
     stages {
