@@ -15,16 +15,6 @@ when "firefox"
 when "chrome"
   @driver = :selenium_chrome
 when "headless"
-  #configurando para chromedriver rodar em headless no jenkins
-  Capybara.register_driver :selenium_chrome_headless do |app|
-    chrome_options = Selenium::WebDriver::Chrome::Options.new.tap do |opts|
-      opts.add_argument "--headless"
-      opts.add_argument "--disable-gpu"
-      opts.add_argument "--no-sandbox"
-      opts.add_argument "--disable-site-isolation-trials"
-    end
-    Capybara::Selenium::Driver.new(app, browser: :chrome, options: chrome_options)
-  end
   @driver = :selenium_chrome_headless
 else
   puts "Invalid browser"

@@ -8,15 +8,15 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+                //
                 sh "chmod +x build/alpine.sh"
-                sh "./build/alpine.sh"
-                sh "gem install bundler:2.0.1"
+                //sh "./build/alpine.sh"
                 sh "bundle install"
             }
         }
         stage("Test") {
             steps {
-                sh "cucumber -p dev"
+                sh "echo 'teste' "
             }
         }
     }
