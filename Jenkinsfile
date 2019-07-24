@@ -11,8 +11,8 @@ pipeline {
                 
                 //sh "chmod +x build/alpine.sh"
                 //sh "./build/alpine.sh"
-                sh "bundle update --bundler"
                 sh "bundle install"
+                sh "bundle update --bundler"
             }
         }
         stage("Test") {
