@@ -11,7 +11,7 @@ pipeline {
                 
                 sh "chmod +x build/alpine.sh"
                 sh "./build/alpine.sh"
-                sh "gem install bundler:2.0.1" //não fuciona sem instalar o bundler
+                //sh "gem install bundler:2.0.1" //não fuciona sem instalar o bundler
                 sh "bundle install"
             }
         }
