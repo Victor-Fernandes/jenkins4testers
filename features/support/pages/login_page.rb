@@ -4,6 +4,7 @@ class LoginPage < BasePage
   end
 
   def with(email, pass)
+    Capybara.default_max_wait_time
     find("input[name=email]").set email
     find("input[name=password]").set pass
     click_button "Entrar"
